@@ -1,18 +1,9 @@
-function sendUsername() {
+function login() {
 
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
-	var password2 = document.getElementById("password2").value;
 	
-	if (password !== password2){
-
-		window.alert("Passwords do not match.");
-
-		return;
-
-	}
-
-	else if (username == ""){
+	if (username == ""){
 
 		window.alert("Username is required.");
 
@@ -56,14 +47,14 @@ function sendUsername() {
 
 				else {
 
-					window.location.replace("http://web.engr.oregonstate.edu/~jurczakn/login.html");
+					window.location.replace("http://web.engr.oregonstate.edu/~jurczakn/final.php");
 
 				}
 
 			}
 		};
 
-		var url = 'http://web.engr.oregonstate.edu/~jurczakn/createLogin.php';
+		var url = 'http://web.engr.oregonstate.edu/~jurczakn/finalLogin.php';
 
 		reg.open('POST', url);
 
@@ -73,4 +64,4 @@ function sendUsername() {
 	}
 
 
-};			
+};		

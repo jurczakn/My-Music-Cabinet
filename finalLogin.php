@@ -13,7 +13,7 @@ if (!$mysqli || $mysqli->connect_errno){
 
 if (isset($_POST['username']) && isset($_POST['password'])){
 
-	$stmt = $mysqli->prepare("INSERT INTO login (username, password) VALUES (?, ?)");
+	$stmt = $mysqli->prepare("SELECT password FROM login WHERE username=?");
 	
 	if(!$stmt){
 
@@ -21,23 +21,35 @@ if (isset($_POST['username']) && isset($_POST['password'])){
 
 	}
 
-	$stmt->bind_param("ss", $_POST['username'], $_POST['password']);
+	$stmt->bind_param("s", $_POST['username']);
 
 	$stmt->execute();
+	
+	$stmt->bind_result($password);
 
-	mysqli_stmt_store_result($stmt);
+	if ($stmt->fetch()){
 
-	//echo $stmt->errno . ": " . $stmt->error . "/n";
+		if ($password == $_POST['password']){
 
-	if ($stmt->errno == 1062){
+			session_start();
 
-		echo "Sorry, username taken.";
+			$_SESSION['username'] = $_POST['username'];
+
+			$result = true;
+
+			echo "";
+
+		}
+	
+		else
+
+			echo "Wrong Password";
 
 	}
 
 	else {
 
-		echo "";
+		echo "Username does not exist";
 
 	}
 
