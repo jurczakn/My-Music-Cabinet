@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test Upload</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <form action="uploadtest.php" method="post" enctype="multipart/form-data">
+      <label for="artist">Artist: </label>
+      <input type="text" name="artist" id="artist"><br>
+      <label for="title">Title: </label> 
+      <input type="text" name="title" id="title" required><br>
+      <label for="album">Album:</label>
+      <input type="text" name="album" id="album"><br>
+      <label for="genre">Genre: </label>
+      <input type="text" name="genre" id="genre"><br>
+      <label for="length">Length:</label>
+      <input type="number" name="length" id="length" step=.01 min=0><br>
+      <label for="radio">Public: </label>
+      <input type="radio" name="shared" value=1 required>
+      <label for="shared">Private: </label>
+      <input type="radio" name="shared" value=0><br>
+      <label for="uploadFile">Select a song:</label>
+      <input type="file" name="uploadFile" id="uploadFile" required><br>
+      <input type="submit" value ="Upload Song" name="submit"><br>
+    </form>
+    <audio controls>
+      <source src="test/01%20One%20More%20Time.mp3" type="audio/mpeg">
+    </audio>
+  </body>
+</html>
