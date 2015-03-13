@@ -35,7 +35,7 @@ else {
 <body>
   <a href="logout.php">Logout</a>
   <br>
-  <a href="uploadSong.html">Add Song</a><br>
+  <a href="uploadSong.html">Upload Song Song</a><br>
   <div id="cl">
     	 <table id="mySongs" border = 1px solid black>
       </table>

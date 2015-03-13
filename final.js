@@ -2,9 +2,9 @@ function listMySongs (mySongs) {
 
 	var table = document.getElementById("mySongs");
 
-	while (mySongs.firstChild){
+	while (table.firstChild){
 
-		mySongs.removeChild(mySongs.firstChild);
+		table.removeChild(table.firstChild);
 	}
 
 	var cap = document.createElement('caption');
@@ -159,13 +159,7 @@ function listMySongs (mySongs) {
 
 				if(this.readyState === 4){
 
-					var results = JSON.parse(this.responseText);
-
-					console.log(results);
-
-					videoTable(results.results);
-
-					genreList(results.genres);
+					getMySongs();
 
 				}
 
@@ -226,9 +220,9 @@ function listPopSongs (mySongs) {
 
 	var table = document.getElementById("popSongs");
 
-	while (mySongs.firstChild){
+	while (table.firstChild){
 
-		mySongs.removeChild(mySongs.firstChild);
+		table.removeChild(table.firstChild);
 	}
 
 	var cap = document.createElement('caption');
@@ -333,7 +327,7 @@ function listPopSongs (mySongs) {
 
 		addBut.type = "button";
 
-		addBut.value = mySongs[i].owner;
+		addBut.value = "id="+mySongs[i].id+"&artist="+mySongs[i].artist+"&title="+mySongs[i].title+"&album="+mySongs[i].album+"&genre="+mySongs[i].genre+"&length="+mySongs[i].length+"&file="+mySongs[i].file+"&shared="+mySongs[i].shared;
 
 		addBut.textContent = "ADD";
 		
@@ -354,6 +348,42 @@ function listPopSongs (mySongs) {
 		trr.appendChild(play);
 
 		table.appendChild(trr);
+
+		addBut.addEventListener('click', function(){
+
+			var reg = new XMLHttpRequest();
+
+			if(!reg){
+
+				throw 'Unable to create HttpRequest.';
+
+			}
+
+			var vars;
+			
+			vars = this.value;
+
+			reg.onreadystatechange = function(){
+
+				if(this.readyState === 4){
+
+					getMySongs();
+
+				}
+
+			};
+
+			var url = 'http://web.engr.oregonstate.edu/~jurczakn/addSong.php';
+
+			reg.open('POST', url);
+
+			reg.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+			reg.send(vars);
+
+
+		});
+
 
 	}
 
