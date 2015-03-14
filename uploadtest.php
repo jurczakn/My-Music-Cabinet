@@ -6,8 +6,6 @@ $folder = "test/";
 
 $file = $folder . $_FILES["uploadFile"]["name"];
 
-echo $file;
-
 $uploadOk = 1;
 
 $fileType = substr($file, strrpos($file, '.') + 1);
@@ -92,3 +90,11 @@ if ($uploadOk != 0){
 }
 
 ?>
+
+<br>
+
+<a href="http://web.engr.oregonstate.edu/~jurczakn/uploadSong.html"> Upload another song</a>
+
+<br>
+
+<a href="http://web.engr.oregonstate.edu/~jurczakn/final.php"> Go Back</a>

@@ -8,7 +8,7 @@ session_start();
 $mysqli = new mysqli("oniddb.cws.oregonstate.edu", "jurczakn-db", "681ouA5JomfiwgDp", "jurczakn-db");
 
 
-$stmt = $mysqli->prepare("SELECT * FROM songs WHERE shared=1 AND user!=? ORDER BY adds");
+$stmt = $mysqli->prepare("SELECT * FROM songs WHERE shared=1 AND user!=? ORDER BY adds DESC");
 
 if(!$stmt){
 

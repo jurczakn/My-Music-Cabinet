@@ -14,13 +14,7 @@ function listMySongs (mySongs) {
 	table.appendChild(cap);
 
 	var tr = document.createElement('tr');
-	
-	var id = document.createElement('th');
-
-	id.textContent = "Id";
-
-	tr.appendChild(id);
-	
+		
 	var artist = document.createElement('th');
 
 	artist.textContent = "artist";
@@ -62,13 +56,7 @@ function listMySongs (mySongs) {
 	for (var i = 0; i < mySongs.length; i++){
 
 		var trr = document.createElement('tr');
-	
-		var id2 = document.createElement('td');
-
-		id2.textContent = mySongs[i].id;
-
-		trr.appendChild(id2);
-	
+		
 		var n = document.createElement('td');
 
 		n.textContent = mySongs[i].artist;
@@ -233,12 +221,6 @@ function listPopSongs (mySongs) {
 
 	var tr = document.createElement('tr');
 	
-	var id = document.createElement('th');
-
-	id.textContent = "Id";
-
-	tr.appendChild(id);
-	
 	var artist = document.createElement('th');
 
 	artist.textContent = "artist";
@@ -280,12 +262,6 @@ function listPopSongs (mySongs) {
 	for (var i = 0; i < mySongs.length; i++){
 
 		var trr = document.createElement('tr');
-	
-		var id2 = document.createElement('td');
-
-		id2.textContent = mySongs[i].id;
-
-		trr.appendChild(id2);
 	
 		var n = document.createElement('td');
 

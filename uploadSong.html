@@ -5,6 +5,9 @@
   <title>Test Upload</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <div id="title">
+  My Music Cabinet
+  </div>
   <body>
     <form action="uploadtest.php" method="post" enctype="multipart/form-data">
       <label for="artist">Artist: </label>
@@ -25,8 +28,5 @@
       <input type="file" name="uploadFile" id="uploadFile" required><br>
       <input type="submit" value ="Upload Song" name="submit"><br>
     </form>
-    <audio controls>
-      <source src="test/01%20One%20More%20Time.mp3" type="audio/mpeg">
-    </audio>
   </body>
 </html>

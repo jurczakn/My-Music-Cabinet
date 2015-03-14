@@ -18,22 +18,27 @@ if (!isset($_SESSION['username'])){
 }
 
 else {
-
-	echo "Hello " . $_SESSION['username'];
-
-}
-
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>cs290-create login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="final.css">
 </head>
 <body>
-  <a href="logout.php">Logout</a>
+  <div id="title">
+  My Music Cabinet
+    <div id="user">
+<?php
+	echo "Hello " . $_SESSION['username'];
+
+}
+
+?>
+      <a href="logout.php">Logout</a>
+    </div>
+  </div>
   <br>
   <a href="uploadSong.html">Upload Song Song</a><br>
   <div id="cl">
