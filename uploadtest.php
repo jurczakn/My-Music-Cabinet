@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My Music Cabinet-Upload Results</title>
+  <link rel="stylesheet" href="final1.css">
+</head>
+  <div id="title">
+  My Music Cabinet
+  </div>
+
 <?php
 
 session_start();
@@ -98,3 +109,6 @@ if ($uploadOk != 0){
 <br>
 
 <a href="http://web.engr.oregonstate.edu/~jurczakn/final.php"> Go Back</a>
+
+</body>
+</html>

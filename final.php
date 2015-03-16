@@ -23,7 +23,7 @@ else {
 <html>
 <head>
   <meta charset="utf-8">
-  <title>cs290-create login</title>
+  <title>My Music Cabinet</title>
   <link rel="stylesheet" href="final.css">
 </head>
 <body>
@@ -40,7 +40,9 @@ else {
     </div>
   </div>
   <br>
-  <a href="uploadSong.html">Upload Song Song</a><br>
+  <div id="uploadSong">
+    <a href="uploadSong.html" id="us">Upload Song</a>
+  </div>
   <div id="cl">
     	 <table id="mySongs" border = 1px solid black>
       </table>
