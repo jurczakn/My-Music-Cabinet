@@ -232,8 +232,3 @@ form{
     display: inline-block;
     text-align: center;
     }
-
-::-webkit-file-upload-button {
-    background: black;
-    color: red;
-    padding: 1em;
