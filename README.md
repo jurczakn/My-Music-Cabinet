@@ -7,3 +7,5 @@ and other users songs can be listened to, and added to the users library, where
 they are kept.
 
 This is a link to a live version of the website: http://web.engr.oregonstate.edu/~jurczakn/final.php
+
+Database hosted live on oregon state's oniddb.
